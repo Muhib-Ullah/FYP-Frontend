@@ -1,0 +1,64 @@
+<div class="ocr_feature-hero-container">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-4 ocr_feature-heading-container">
+                    <h1 class="ocr_feature_heading">Image to <span style="color: #008080;">Text </span>Converter</h1>
+                    <h5 class="ocr_feature_sub-heading">Transform Images into Text with Ease. Fast, Accurate &
+                        Reliable OCR Solution!</h5>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="file_attachment-container">
+                        <div class="file_attachment-header mb-3">
+                            <img src="assets/file_attachment-logo.png" alt="icon not found" width="40px">
+                        </div>
+                        <div class="file_attachment-content mb-3">
+                            <div class="file_attachment-content-text mb-3">
+                                <h5>Upload Image</h5>
+                                <h6>Choose an image file to proceed.</h6>
+                            </div>
+                            <div class="file-upload-container" (drop)="onFileDrop($event)" (dragover)="onDragOver($event)">
+                                <div *ngIf="!selectedImageUrl" class="file-upload-data-container">
+                                    <div class="file-upload-icon mb-3">
+                                        <img src="assets/file_attachment-logo.png" alt="Upload Icon" />
+                                    </div>
+                                    <div class="file-upload-text">
+                                        <p><strong>Drag and Drop your image</strong></p>
+                                        <p>Or click on the button to select image</p>
+                                        <button class="browse_file-btn" (click)="fileInput.click()">
+                                            Browse Image
+                                        </button>
+                                    </div>
+                                    <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" hidden />
+                                </div>
+                                <!-- Display the selected image when available -->
+                                <div *ngIf="selectedImageUrl" class="image-preview">
+                                    <img [src]="selectedImageUrl" alt="Selected Image" class="preview-img">
+                                    <img src="assets/remove_attachment-icon.png" alt="remove-icon" class="remove-attach_icon" (click)="resetSelection()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file_attachment-footer">
+                            <button class="done_btn" (click)="handleSuccess()">Extract Text</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="extract_text-container">
+                        <div class="file_attachment-header mb-3">
+                            <img src="assets/extracted_text-logo.png" alt="icon not found" width="40px">
+                        </div>
+                        <div class="file_attachment-content-text mb-3">
+                            <h5>Extracted Text</h5>
+                            <h6>Review the extracted text from your image.</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
