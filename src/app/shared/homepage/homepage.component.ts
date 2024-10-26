@@ -9,7 +9,30 @@ import { Router } from '@angular/router';
 export class HomepageComponent {
   constructor(private router: Router) {}
 
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
+  featureCards = [
+    {
+      ftname: 'OCR Technology',
+      ftdesc: 'Easily extract and convert text from images or scanned Urdu documents into editable formats',
+      ftimg: 'assets/ocr.png',
+      ftroute: 'ocr'
+    },
+    {
+      ftname: 'Summarization',
+      ftdesc: 'Quickly summarize lengthy Urdu articles, research papers, or documents into  meaningful text.',
+      ftimg: 'assets/summary.png',
+      ftroute: 'summarization'
+    },
+    {
+      ftname: 'Translation',
+      ftdesc: 'Translate text from multiple languages into Urdu for better communication and understanding.',
+      ftimg: 'assets/translation.png',
+      ftroute: '/data-analytics'
+    },
+    {
+      ftname: 'Text to Speech',
+      ftdesc: 'Effortlessly convert written Urdu text into natural-sounding speech for lingual purposes.',
+      ftimg: 'assets/text-to-speech.png',
+      ftroute: '/cloud-storage'
+    }]
+
 }

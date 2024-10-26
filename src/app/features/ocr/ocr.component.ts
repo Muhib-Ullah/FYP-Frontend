@@ -53,6 +53,19 @@ export class OcrComponent {
     }
   }
 
-  //Services Calls
+  extractedText: string = 'sdsfadfsdfdsffs'; // The extracted text from the image
 
+  copyText() {
+    navigator.clipboard.writeText(this.extractedText)
+      .then(() => {
+        this.Toast.success('Text copied to clipboard');
+      })
+      .catch((error) => {
+        this.Toast.error('Error copying text to clipboard');
+        console.error('Error copying text:', error);
+      });
+  
+  }
+
+  //Services Calls
 }

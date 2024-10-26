@@ -1,16 +1,54 @@
+.navbar{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: #EBF4F6;
+}
+
 .btn-login {
+    font-family: PoppinsRegular;
     background-color: #008080;
-    color: white;             
-    padding: 8px 30px;       
-    border: none;             
-    border-radius: 8px;      
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    cursor: pointer;        
+    color: white;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    margin: 0px 10px;
     transition: background-color 0.3s, box-shadow 0.3s;
-    
+
 }
 
 .btn-login:hover {
-    background-color: #007373; 
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #007373;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
+
+.nav-link {
+    font-family: PoppinsRegular;
+    color: black;
+    margin: 0px 5px;
+    transition: color 0.3s;
+    position: relative;
+  }
+
+
+.nav-link:hover {
+    color: #008080;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #008080;
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 50%; 
+    left: 50%;
+    transform: translateX(-50%);
+  }

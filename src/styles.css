@@ -8,3 +8,8 @@
     font-family: PoppinsRegular;
     src: url(../public/assets/Fonts/Poppins-Regular.ttf) format('truetype');
 }
+
+@font-face {
+    font-family: NastaliqUrdu;
+    src: url(../public/assets/Fonts/NotoNastaliqUrdu-VariableFont_wght.ttf) format('trutype');
+}

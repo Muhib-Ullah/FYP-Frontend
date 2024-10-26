@@ -1,17 +1,16 @@
 <div class="ocr_feature-hero-container">
     <div class="container-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mb-4 ocr_feature-heading-container">
+            <div class="row mb-4">
+                <div class="col-12 text-center ocr_feature-heading-container">
                     <h1 class="ocr_feature_heading">Image to <span style="color: #008080;">Text </span>Converter</h1>
-                    <h5 class="ocr_feature_sub-heading">Transform Images into Text with Ease. Fast, Accurate &
-                        Reliable OCR Solution!</h5>
+                    <h5 class="ocr_feature_sub-heading">Transform Images into Text with Ease. Fast, Accurate & Reliable OCR Solution!</h5>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
+            <div class="row g-4"> 
+                <div class="col-lg-4 col-md-5 col-sm-12">
                     <div class="file_attachment-container">
                         <div class="file_attachment-header mb-3">
                             <img src="assets/file_attachment-logo.png" alt="icon not found" width="40px">
@@ -35,7 +34,6 @@
                                     </div>
                                     <input #fileInput type="file" (change)="onFileSelected($event)" accept="image/*" hidden />
                                 </div>
-                                <!-- Display the selected image when available -->
                                 <div *ngIf="selectedImageUrl" class="image-preview">
                                     <img [src]="selectedImageUrl" alt="Selected Image" class="preview-img">
                                     <img src="assets/remove_attachment-icon.png" alt="remove-icon" class="remove-attach_icon" (click)="resetSelection()">
@@ -47,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-md-7 col-sm-12"> <!-- Responsive classes -->
                     <div class="extract_text-container">
                         <div class="file_attachment-header mb-3">
                             <img src="assets/extracted_text-logo.png" alt="icon not found" width="40px">
@@ -55,6 +53,17 @@
                         <div class="file_attachment-content-text mb-3">
                             <h5>Extracted Text</h5>
                             <h6>Review the extracted text from your image.</h6>
+                        </div>
+                        <div class="extract_text_content mb-3">
+                            <textarea [(ngModel)]="extractedText" rows="10" class="form-control" 
+                                      style="width: 100%; height: 300px; resize: none;" 
+                                      readonly 
+                                      placeholder="Extracted text will appear here...">
+                            </textarea>
+                        </div>
+                        <div class="text_display-footer">
+                            <button class="text_display-action_btn" (click)="copyText()">Copy Text</button>
+                            <button class="text_display-action_btn" (click)="handleSuccess()">Extract Text</button>
                         </div>
                     </div>
                 </div>

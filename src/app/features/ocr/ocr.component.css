@@ -138,3 +138,25 @@
     border-radius: 20px;
     padding: 20px 40px;
 }
+
+.text_display-footer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+
+.text_display-action_btn{
+    padding: 8px 20px;
+    background-color: white;
+    outline: 3px #008080 solid;
+    outline-offset: -3px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 400ms;
+    font-family: PoppinsRegular;
+    color: #008080;
+    font-weight: bold;
+}

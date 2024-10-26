@@ -4,11 +4,15 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FeaturesModule } from '../features/features.module';
+import { FeatureCardComponent } from './feature-card/feature-card.component';
+import { ProgressBarComponent } from './progressbar/progressbar.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    FeatureCardComponent,
+    ProgressBarComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +21,8 @@ import { FeaturesModule } from '../features/features.module';
   ],
   exports: [
     NavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    ProgressBarComponent
   ]
 })
 export class SharedModule { }
