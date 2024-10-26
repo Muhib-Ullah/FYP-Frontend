@@ -12,6 +12,6 @@ export class SummarizationService {
 
   //api call to summarize the text
   summarizeText(data: any): Observable<any>{
-    return this.http.post<any>(`${environment.apiUrl}/summarize`, data)
+    return this.http.post<any>(`${environment.apiUrl}/services/summarize`, data)
   }
 }
