@@ -1,0 +1,31 @@
+.ocr_feature_heading {
+    font-family: PoppinsBold;
+}
+
+.ocr_feature_sub-heading {
+    font-family: PoppinsRegular;
+    font-weight: bold;
+}
+
+.translation_input_text-header h5{
+    font-family: PoppinsRegular;
+    font-weight: bold;
+}
+
+.translation_input_textarea textarea{
+    resize: none;
+    overflow-y: auto; 
+    text-align: left;
+    font-family: PoppinsRegular;
+}
+
+#inputText{
+    text-align: right;
+}
+
+.translation_input_text-action_btns button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}

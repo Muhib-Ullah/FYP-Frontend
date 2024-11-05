@@ -26,7 +26,7 @@ export class HomepageComponent {
       ftname: 'Translation',
       ftdesc: 'Translate text from multiple languages into Urdu for better communication and understanding.',
       ftimg: 'assets/translation.png',
-      ftroute: '/data-analytics'
+      ftroute: 'translation'
     },
     {
       ftname: 'Text to Speech',

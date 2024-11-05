@@ -7,11 +7,13 @@ import { OcrComponent } from './ocr/ocr.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SummarizationComponent } from './summarization/summarization.component';
+import { TranslationComponent } from './translation/translation.component';
 
 @NgModule({
   declarations: [
     OcrComponent,
-    SummarizationComponent
+    SummarizationComponent,
+    TranslationComponent
   ],
   imports: [
     FormsModule,

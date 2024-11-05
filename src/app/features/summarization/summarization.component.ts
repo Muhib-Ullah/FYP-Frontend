@@ -54,11 +54,17 @@ export class SummarizationComponent {
       this.RequestInProgress = true; 
       this.SummarizationService.summarizeText(formData).subscribe(
         (response) => {
-          this.OutputText = response.summary;
-          this.RequestInProgress = false;
+          if (response.status) {
+            this.OutputText = response.data;
+            this.RequestInProgress = false;
+          }else {
+            this.Toast.error(response.message);
+            this.RequestInProgress = false; 
+            this.clearOutputText();
+          }
         },
         (err) => {
-          this.Toast.error(err.error);
+          this.Toast.error(err.error.message);
           this.RequestInProgress = false; 
           this.clearOutputText();
         }
