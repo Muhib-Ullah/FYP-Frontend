@@ -15,7 +15,6 @@ export class FeatureCardComponent {
   constructor(private router: Router) {}
 
   navigate() {
-    console.log('i am running')
     if (this.ftroute) {
       this.router.navigate([this.ftroute]);
     }

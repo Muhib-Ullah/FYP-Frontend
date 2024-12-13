@@ -13,3 +13,5 @@
     font-family: NastaliqUrdu;
     src: url(../public/assets/Fonts/NotoNastaliqUrdu-VariableFont_wght.ttf) format('trutype');
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

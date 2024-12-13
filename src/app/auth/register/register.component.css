@@ -1,0 +1,127 @@
+.form-header,
+.form-body {
+    font-family: PoppinsRegular;
+}
+
+.form-header-main h1 {
+    font-family: PoppinsBold;
+}
+
+.register-input-field {
+    position: relative;
+    height: 82px;
+}
+
+.register-input-field input{
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    font-size: 16px !important;
+    padding: 0px !important;
+    border-radius: 0px !important;
+}
+
+
+:host ::ng-deep .ng-placeholder{
+    color: #595c5f !important;
+}
+
+:host ::ng-deep .ng-select-container{
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    font-size: 16px !important;
+    border-radius: 0px !important;
+    height: 42px !important;
+}
+
+:host ::ng-deep .ng-value-container, 
+:host ::ng-deep .ng-input {
+    padding-left: 0px !important;
+}
+
+:host ::ng-deep .ng-select-opened .ng-select-container  {
+    border-bottom: 2px solid #008080;
+}
+
+:host ::ng-deep .ng-select-focused:not(.ng-select-opened) .ng-select-container {
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    box-shadow: none !important; 
+}
+
+.register-input-field input:focus {
+    outline: none;
+    border-bottom: 2px solid #008080;
+    box-shadow: none;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    color: red;
+    opacity: 0;
+    font-size: 13px;
+    animation: fadeInMove 0.3s ease-out forwards;
+}
+
+@keyframes fadeInMove {
+    0% {
+        bottom: -15px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: -20px;
+        opacity: 1;
+    }
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+:host ::ng-deep .ng-select[formControlName="country"].ng-invalid.ng-touched:not(.ng-has-value) .ng-select-container {
+    border-color: red;
+}
+
+:host ::ng-deep .ng-select-focused.ng-invalid.ng-touched .ng-select-container:not(.ng-has-value) {
+    border-color: #008080;
+}
+
+button {
+    cursor: pointer;
+    font-family: PoppinsRegular;
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #008080;
+    color: white;
+    border: 1px solid transparent;
+    font-size: 15px;
+  }
+  
+  button > svg {
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+}
+  
+.form-footer span {
+    font-family: PoppinsRegular;
+}
+
+.form-footer span a {
+    text-decoration: none;
+    color: #8a8a8a;
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,26 @@
+.full-height-section {
+    height: calc(100vh - 56px);
+}
+
+.hello{
+    align-items: center;
+    background-image: url('../../../../public/assets/auth_bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+
+}
+
+.hello h3{
+    font-family: PoppinsRegular;
+    font-weight: 700;
+    font-size: 4rem;
+    color: white;
+}
+
+.hello h1{
+    font-family: PoppinsBold;
+    font-size: 6rem;
+    color: white;
+}

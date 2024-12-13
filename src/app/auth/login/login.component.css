@@ -1,0 +1,97 @@
+.form-header,
+.form-body {
+    font-family: PoppinsRegular;
+}
+
+.form-header-main h1 {
+    font-family: PoppinsBold;
+}
+
+.login-input-field {
+    position: relative;
+}
+
+.form-control-lg {
+    border: none;
+    border-bottom: 2px solid #c8c8c8;
+    font-size: 16px !important;
+    padding: 0px !important;
+    border-radius: 0px !important;
+}
+
+.login-input-field input:focus {
+    outline: none;
+    border-bottom: 2px solid #008080;
+    box-shadow: none;
+}
+
+.pass-reset-link a {
+    text-decoration: none;
+    color: #8a8a8a;
+    font-size: 14px;
+}
+
+.pass-reset-link a:hover {
+    color: #008080;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    color: red;
+    opacity: 0;
+    animation: fadeInMove 0.3s ease-out forwards;
+}
+
+@keyframes fadeInMove {
+    0% {
+        bottom: -15px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: -25px;
+        opacity: 1;
+    }
+}
+
+input.ng-invalid.ng-touched {
+    border-color: red;
+}
+
+
+button {
+    cursor: pointer;
+    font-family: PoppinsRegular;
+    transition: all .2s;
+    padding: 10px 20px;
+    border-radius: 100px;
+    background: #008080;
+    color: white;
+    border: 1px solid transparent;
+    font-size: 15px;
+  }
+  
+  button > svg {
+    margin-left: 10px;
+    transition: transform .3s ease-in-out;
+  }
+  
+  button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+}
+  
+.form-footer span {
+    font-family: PoppinsRegular;
+}
+
+.form-footer span a {
+    text-decoration: none;
+    color: #8a8a8a;
+    cursor: pointer;
+}

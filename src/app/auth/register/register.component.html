@@ -1,0 +1,142 @@
+<ng-container>
+    <div class="form-header mb-4">
+        <div class="form-header-main d-flex">
+            <img src="assets/translation.png" alt="" width="60px">
+            <h1 class="my-auto mx-2">REGISTER</h1>
+        </div>
+    </div>
+    <div class="form-body mb-3">
+        <!-- REGISTER FORM -->
+        <form [formGroup]="registerForm">
+            <!--FIRST ROW-->
+            <div class="row">
+                <!--FIRST NAME-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px; color: #008080;">person</i>
+                        <label for="register-email" class="form-label">First Name</label>
+                    </div>
+                    <input class="form-control form-control-lg w-md-50" type="text" placeholder="Enter your first name"
+                        formControlName="first_name" aria-label=".register-fname-form-control">
+                    <div *ngIf="registerForm.get('first_name')?.touched && registerForm.get('first_name')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('first_name') }}</small>
+                    </div>
+                </div>
+                <!--LAST NAME-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px;  color: #008080">group</i>
+                        <label for="register-password" class="form-label">Last Name</label>
+                    </div>
+                    <input class="form-control form-control-lg w-md-50 mb-2" type="text"
+                        placeholder="Enter your last name" formControlName="last_name"
+                        aria-label=".register-lname-form-control">
+                    <div *ngIf="registerForm.get('last_name')?.touched && registerForm.get('last_name')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('last_name') }}</small>
+                    </div>
+                </div>
+            </div>
+            <!--SECOND ROW-->
+            <div class="row">
+                <!--EMAIL ADDRESS-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px; color: #008080;">email</i>
+                        <label for="register-email" class="form-label">Email Address</label>
+                    </div>
+                    <input class="form-control form-control-lg w-md-50" type="text"
+                        placeholder="Enter your email address" formControlName="email"
+                        aria-label=".register-email-form-control">
+                    <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('email') }}</small>
+                    </div>
+                </div>
+                <!--PASSWORD INPUT FIELD-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px;  color: #008080">lock</i>
+                        <label for="register-password" class="form-label">Password</label>
+                    </div>
+                    <input class="form-control form-control-lg w-md-50 mb-2" type="password"
+                        placeholder="Enter your password" formControlName="password"
+                        aria-label=".register-password-form-control">
+                    <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('password') }}</small>
+                    </div>
+                </div>
+            </div>
+            <!--THIRD ROW-->
+            <div class="row">
+                <!--CONTACT NUMBER-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px; color: #008080;">call</i>
+                        <label for="register-email" class="form-label">Contact</label>
+                    </div>
+                    <input class="form-control form-control-lg w-md-50" type="text" placeholder="Enter your contact"
+                        formControlName="contact" aria-label=".register-contact-form-control">
+                    <div *ngIf="registerForm.get('contact')?.touched && registerForm.get('contact')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('contact') }}</small>
+                    </div>
+                </div>
+                <!--COUNTRY-->
+                <div class="col-lg-6 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px;  color: #008080">public</i>
+                        <label for="register-password" class="form-label">Country</label>
+                    </div> 
+                    <ng-select
+                        placeholder="Select your country"
+                        aria-label=".register-country-form-control" 
+                        formControlName="country">
+                        <ng-option *ngFor="let country of countryArray" [value]="country">
+                            {{country}}
+                        </ng-option>
+                    </ng-select>
+                    <div *ngIf="registerForm.get('country')?.touched && registerForm.get('country')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('country') }}</small>
+                    </div>
+                </div>
+            </div>
+            <!--FOURTH ROW-->
+            <div class="row">
+                <!--INSTITUTE-->
+                <div class="col-12 register-input-field mb-4">
+                    <div class="d-flex">
+                        <i class="material-icons" style="margin-right: 5px;  color: #008080">school</i>
+                        <label for="institute" class="form-label">Institute Name</label>
+                    </div>
+                    <input type="text" class="form-control form-control-lg w-md-50"
+                        placeholder="Enter your institute name" formControlName="institute"
+                        aria-label=".register-institute-form-control">
+                    <div *ngIf="registerForm.get('institute')?.touched && registerForm.get('institute')?.invalid"
+                        class="error-message">
+                        <small>{{ getErrorMessages('institute') }}</small>
+                    </div>
+                </div>
+            </div>
+
+            <!--REGISTER SUBMIT BUTTON-->
+            <div class="register-submit-btn d-flex justify-content-center">
+                <button type="submit">
+                    <span>REGISTER NOW</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 74 74" height="34" width="34">
+                        <circle stroke-width="3" stroke="white" r="30.5" cy="37" cx="37"></circle>
+                        <path fill="white"
+                            d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="form-footer d-flex justify-content-center">
+        <span>Already have an account? <a (click)="goToLogin()">LOGIN</a></span>
+    </div>
+</ng-container>
