@@ -8,7 +8,7 @@
   </div>
   <div class="form-body mb-5">
     <!--LOGIN FORM-->
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
       <!--EMAIL INPUT FIELD-->
       <div class="login-input-field mb-4">
         <div class="d-flex">

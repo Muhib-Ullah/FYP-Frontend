@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -13,13 +15,19 @@ export class RegisterComponent implements OnInit {
   countryArray: any[] = [];
   @Output() switchToLogin = new EventEmitter<void>();
   
-  constructor(private fb: FormBuilder, private http: HttpClient) {
-    this.registerForm = this.fb.group({
+  constructor(
+    private fb: FormBuilder, 
+    private http: HttpClient, 
+    public authService: AuthService,
+    public Toast: ToastrService
+    ) {
+    
+      this.registerForm = this.fb.group({
       first_name: ['', [Validators.required]],
       last_name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]],
-      contact: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern(/^\+?[1-9]\d{1,14}$/)]],
+      contact: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(15), Validators.pattern(/^\+?[0-9]\d{1,14}$/)]],
       country: [null , [Validators.required]],
       institute: ['', [Validators.required]]
     })
@@ -77,5 +85,29 @@ export class RegisterComponent implements OnInit {
 
   goToLogin() {
     this.switchToLogin.emit();
+  }
+
+
+  submitForm(){
+    if (this.registerForm.valid) {
+      const formData = this.registerForm.value
+      console.log(' formData :>> ', formData);
+
+      this.authService.register(formData).subscribe({
+        next: (response) => {
+          if (response.status) {
+            this.Toast.success('user registerd succesfully');
+          } else {
+            this.Toast.error('user registerd not succesfully');
+            console.log('response :>> ', response);
+          }
+        },
+        error: (err) => {
+          console.error('err :>> ', err);
+          this.Toast.error(err.error.message);
+        },
+      });
+
+    }
   }
 }

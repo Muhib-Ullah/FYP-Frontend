@@ -7,7 +7,7 @@
     </div>
     <div class="form-body mb-3">
         <!-- REGISTER FORM -->
-        <form [formGroup]="registerForm">
+        <form [formGroup]="registerForm" (ngSubmit)="submitForm()">
             <!--FIRST ROW-->
             <div class="row">
                 <!--FIRST NAME-->

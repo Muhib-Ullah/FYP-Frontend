@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,11 @@ export class LoginComponent {
   loginForm: FormGroup;
   @Output() switchToRegister = new EventEmitter<void>();
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder, 
+    private authService:AuthService,
+    public Toast: ToastrService
+  ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(12)]]
@@ -45,6 +51,27 @@ export class LoginComponent {
   goToRegister() {
     console.log('iran')
     this.switchToRegister.emit();
+  }
+
+  submitForm(){
+    if (this.loginForm.valid) {
+      const formData = this.loginForm.value
+      this.authService.login(formData).subscribe({
+        next: (response) => {
+          if (response.status) {
+            this.Toast.success('login succesfully');
+          } else {
+            this.Toast.error('user registerd not succesfully');
+            console.log('response :>> ', response);
+          }
+        },
+        error: (err) => {
+          console.error('err :>> ', err);
+          this.Toast.error(err.error.message);
+        },
+      });
+
+    }
   }
 
 }
