@@ -1,13 +1,9 @@
 /*FILE UPLOAD CARD CSS START*/
-.ocr_feature-heading-container {
-    text-align: center;
-}
-
-.ocr_feature_heading {
+.feature_heading {
     font-family: PoppinsBold;
 }
 
-.ocr_feature_sub-heading {
+.feature_sub-heading {
     font-family: PoppinsRegular;
     font-weight: bold;
 }
@@ -24,7 +20,7 @@
 
 .file_attachment-content-text h5 {
     font-weight: bold;
-    color: #008080;
+    color: #838eb9;
 }
 
 .file_attachment-footer {
@@ -36,7 +32,7 @@
 .done_btn {
     width: 80%;
     font-family: PoppinsRegular;
-    background-color: #008080;
+    background-color: #838eb9;
     color: white;
     padding: 8px 30px;
     border: none;
@@ -47,7 +43,7 @@
 }
 
 .done_btn:hover {
-    background-color: #007373;
+    background-color: #727b9f;
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -89,18 +85,18 @@
 .browse_file-btn {
     padding: 8px 20px;
     background-color: white;
-    outline: 3px #008080 solid;
+    outline: 3px #838eb9 solid;
     outline-offset: -3px;
     border-radius: 5px;
     cursor: pointer;
     transition: 400ms;
     font-family: PoppinsRegular;
-    color: #008080;
+    color: #838eb9;
     font-weight: bold;
 }
 
 .browse_file-btn:hover {
-    background-color: #008080;
+    background-color: #838eb9;
     color: white;
 }
 
@@ -151,12 +147,19 @@
 .text_display-action_btn{
     padding: 8px 20px;
     background-color: white;
-    outline: 3px #008080 solid;
+    outline: 3px #838eb9 solid;
     outline-offset: -3px;
     border-radius: 5px;
     cursor: pointer;
     transition: 400ms;
     font-family: PoppinsRegular;
-    color: #008080;
+    color: #838eb9;
+    font-weight: bold;
+}
+
+
+
+.feature_input_text-header h5{
+    font-family: PoppinsRegular;
     font-weight: bold;
 }

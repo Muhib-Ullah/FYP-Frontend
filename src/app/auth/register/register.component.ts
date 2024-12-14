@@ -42,7 +42,6 @@ export class RegisterComponent implements OnInit {
       {
         next: (data) => {
           this.countryArray = data;
-          console.log(this.countryArray)
         },
         error: (err) => {
           console.error('Error fetching countries data', err)
@@ -50,8 +49,6 @@ export class RegisterComponent implements OnInit {
       }
     );
   }
-
-
 
   formatFormControlName(formControlName: string): string {
     return formControlName

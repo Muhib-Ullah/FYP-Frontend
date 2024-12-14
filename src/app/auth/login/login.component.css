@@ -5,6 +5,7 @@
 
 .form-header-main h1 {
     font-family: PoppinsBold;
+    color: #838eb9;
 }
 
 .login-input-field {
@@ -21,7 +22,7 @@
 
 .login-input-field input:focus {
     outline: none;
-    border-bottom: 2px solid #008080;
+    border-bottom: 2px solid #838eb9;
     box-shadow: none;
 }
 
@@ -32,7 +33,7 @@
 }
 
 .pass-reset-link a:hover {
-    color: #008080;
+    color: #838eb9;
 }
 
 .error-message {
@@ -67,7 +68,7 @@ button {
     transition: all .2s;
     padding: 10px 20px;
     border-radius: 100px;
-    background: #008080;
+    background: #838eb9;
     color: white;
     border: 1px solid transparent;
     font-size: 15px;

@@ -1,12 +1,11 @@
-<div class="summarization_feature-hero-container">
+<div class="translation-hero-container">
     <div class="container-fluid">
         <div class="container">
             <div class="row mb-4 mt-4">
                 <div class="col-12 text-center ocr_feature-heading-container">
-                    <h1 class="ocr_feature_heading">Text <span style="color: #008080;">Translation</span></h1>
-                    <h5 class="ocr_feature_sub-heading">
-                        Effortlessly Summarize Urdu Text. Quick, Accurate, and Flexible Summarization at Your
-                        Fingertips!
+                    <h1 class="feature_heading">Text <span style="color: #838eb9;">Translation</span></h1>
+                    <h5 class="feature_sub-heading">
+                        Effortlessly translate Urdu text into English with speed, accuracy, and a user-friendly experience tailored for you!
                     </h5>
                 </div>
             </div>
@@ -18,15 +17,15 @@
                 style="border-radius: 10px; box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;">
                 <div class="col-lg-6 col-12 col-md-6 translation_input-text-container p-2 mb-3 mb-md-0">
                     <div class="translation_input_text-header d-flex mb-2">
-                        <img src="assets/translate.png" alt="summary image" width="50px">
+                        <img src="assets/translate_img0.png" alt="translate image" width="50px">
                         <h5 class="my-auto mx-2">Translate Text</h5>
                     </div>
                     <div class="translation_input_textarea mb-3">
-                        <textarea id="inputText" class="form-control" rows="12" [(ngModel)]="InputText" name="inputText"
+                        <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText" name="inputText"
                             placeholder="Enter the text you want to translate."></textarea>
                     </div>
                     <div class="translation_input_text-footer d-flex justify-content-between">
-                        <div class="translation_input_text-action_btns">
+                        <div class="translation_input_text-action_btns my-auto">
                             <button type="button" (click)="copyText($event)" id="inputbtn">
                                 <img src="assets/copy.png" alt="" width="30px">
                             </button>
@@ -34,21 +33,21 @@
                                 <img src="assets/delete.png" alt="" width="30px">
                             </button>
                         </div>
-                        <button type="submit" class="btn btn-success">Translate</button>
+                        <button type="submit" class="btn custom-button">Translate</button>
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 col-md-6 translation_output-text-container p-2">
                     <div class="translation_input_text-header d-flex mb-2">
-                        <img src="assets/translate.png" alt="summary image" width="50px">
+                        <img src="assets/translate_img1.png" alt="summary image" width="50px">
                         <h5 class="my-auto mx-2">Review Translation</h5>
                     </div>
                     <div class="translation_input_textarea mb-3">
-                        <textarea readonly id="outputText" class="form-control" rows="12" [(ngModel)]="OutputText"
+                        <textarea readonly id="outputText" class="form-control" rows="10" [(ngModel)]="OutputText"
                             name="outputText" style="background-color: #efefef;"
                             placeholder="Review the translated text here."></textarea>
                     </div>
-                    <div class="translation_input_text-footer d-flex justify-content-between">
-                        <div class="translation_input_text-action_btns">
+                    <div class="translation_input_text-footer d-flex justify-content-between" style="min-height: 50px;" >
+                        <div class="translation_input_text-action_btns my-auto">
                             <button type="button" (click)="copyText($event)" id="outputbtn">
                                 <img src="assets/copy.png" alt="" width="30px">
                             </button>

@@ -4,14 +4,14 @@
     left: 0;
     width: 100%;
     height: 4px;
-    background: #f0f0f0;
+    background: #838eb9;
     z-index: 9999;
 }
 
 .progress {
     height: 100%;
     width: 100%;
-    background: #008080;
+    background: #ffffff;
     animation: progress-animation 2s infinite linear;
 }
 

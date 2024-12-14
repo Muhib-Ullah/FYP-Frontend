@@ -1,26 +1,26 @@
 .full-height-section {
-    height: calc(100vh - 56px);
+    height: calc(100vh - 59px);
 }
 
 .hello{
     align-items: center;
-    background-image: url('../../../../public/assets/auth_bg.jpg');
+    background-image: url('../../../../public/assets/homepage_bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: column;
-
 }
 
 .hello h3{
+    color: #838eb9;
     font-family: PoppinsRegular;
     font-weight: 700;
-    font-size: 4rem;
-    color: white;
+    font-size: 2rem;
 }
 
 .hello h1{
+    color: #ffffff;
     font-family: PoppinsBold;
-    font-size: 6rem;
-    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px #838eb9;
 }

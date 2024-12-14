@@ -1,10 +1,12 @@
-<div class="ocr_feature-hero-container">
+<div class="ocr-hero-container">
     <div class="container-fluid">
         <div class="container">
-            <div class="row mb-4">
-                <div class="col-12 text-center ocr_feature-heading-container">
-                    <h1 class="ocr_feature_heading">Image to <span style="color: #008080;">Text </span>Converter</h1>
-                    <h5 class="ocr_feature_sub-heading">Transform Images into Text with Ease. Fast, Accurate & Reliable OCR Solution!</h5>
+            <div class="row mb-4 mt-4">
+                <div class="col-12 text-center feature-heading-container">
+                    <h1 class="feature_heading">Image to <span style="color: #838eb9;">Text</span> Converter</h1>
+                    <h5 class="feature_sub-heading">
+                        Transform Images into Text with Ease. Fast, Accurate & Reliable OCR Solution!
+                    </h5>
                 </div>
             </div>
         </div>
@@ -12,8 +14,8 @@
             <div class="row g-4"> 
                 <div class="col-lg-4 col-md-5 col-sm-12">
                     <div class="file_attachment-container">
-                        <div class="file_attachment-header mb-3">
-                            <img src="assets/file_attachment-logo.png" alt="icon not found" width="40px">
+                        <div class="file_attachment-header mb-2">
+                            <img src="assets/ocr_img0.png" alt="icon not found" width="50px">
                         </div>
                         <div class="file_attachment-content mb-3">
                             <div class="file_attachment-content-text mb-3">
@@ -23,7 +25,7 @@
                             <div class="file-upload-container" (drop)="onFileDrop($event)" (dragover)="onDragOver($event)">
                                 <div *ngIf="!selectedImageUrl" class="file-upload-data-container">
                                     <div class="file-upload-icon mb-3">
-                                        <img src="assets/file_attachment-logo.png" alt="Upload Icon" />
+                                        <img src="assets/ocr_img0.png" alt="Upload Icon" />
                                     </div>
                                     <div class="file-upload-text">
                                         <p><strong>Drag and Drop your image</strong></p>
@@ -48,7 +50,7 @@
                 <div class="col-lg-8 col-md-7 col-sm-12"> <!-- Responsive classes -->
                     <div class="extract_text-container">
                         <div class="file_attachment-header mb-3">
-                            <img src="assets/extracted_text-logo.png" alt="icon not found" width="40px">
+                            <img src="assets/ocr_img1.png" alt="icon not found" width="40px">
                         </div>
                         <div class="file_attachment-content-text mb-3">
                             <h5>Extracted Text</h5>
@@ -71,3 +73,5 @@
         </div>
     </div>
 </div>
+
+
