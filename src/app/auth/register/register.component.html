@@ -10,7 +10,7 @@
             <!--FIRST ROW-->
             <div class="row">
                 <!--FIRST NAME-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px; color: #838eb9;">person</i>
                         <label for="register-email" class="form-label">First Name</label>
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <!--LAST NAME-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px;  color: #838eb9">group</i>
                         <label for="register-password" class="form-label">Last Name</label>
@@ -40,13 +40,13 @@
             <!--SECOND ROW-->
             <div class="row">
                 <!--EMAIL ADDRESS-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px; color: #838eb9;">email</i>
                         <label for="register-email" class="form-label">Email Address</label>
                     </div>
                     <input class="form-control form-control-lg w-md-50" type="text"
-                        placeholder="Enter your email address" formControlName="email"
+                        placeholder="Enter your email" formControlName="email"
                         aria-label=".register-email-form-control">
                     <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid"
                         class="error-message">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <!--PASSWORD INPUT FIELD-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px;  color: #838eb9">lock</i>
                         <label for="register-password" class="form-label">Password</label>
@@ -71,7 +71,7 @@
             <!--THIRD ROW-->
             <div class="row">
                 <!--CONTACT NUMBER-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px; color: #838eb9;">call</i>
                         <label for="register-email" class="form-label">Contact</label>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <!--COUNTRY-->
-                <div class="col-lg-6 register-input-field mb-4">
+                <div class="col-lg-6 col-md-6 register-input-field mb-4">
                     <div class="d-flex">
                         <i class="material-icons" style="margin-right: 5px;  color: #838eb9">public</i>
                         <label for="register-password" class="form-label">Country</label>

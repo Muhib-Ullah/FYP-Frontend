@@ -157,9 +157,18 @@
     font-weight: bold;
 }
 
-
-
 .feature_input_text-header h5{
     font-family: PoppinsRegular;
     font-weight: bold;
+}
+
+.extract_text_content textarea{
+    font-family: 'Noto Nastaliq Urdu';
+    text-align: right;
+    line-height: 2.5;
+}
+
+.form-control::placeholder{
+    font-family: PoppinsRegular;
+    text-align:left;
 }

@@ -21,7 +21,6 @@
     border-radius: 0px !important;
 }
 
-
 :host ::ng-deep .ng-placeholder{
     color: #595c5f !important;
 }
@@ -124,5 +123,28 @@ button {
     cursor: pointer;
 }
 
+@media (max-width: 430px) {
 
 
+    .form-header-main{
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-footer{
+        text-align: center;
+    }
+}
+
+@media (min-width:769px) and (max-width: 992px) {
+    .form-label{
+        font-size: 14px;
+    }
+    
+    .register-input-field input::placeholder{
+        font-size: 13px;
+    }
+    :host ::ng-deep .ng-placeholder{
+        font-size: 13px;
+    }
+}

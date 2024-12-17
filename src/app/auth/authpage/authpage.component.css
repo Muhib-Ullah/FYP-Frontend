@@ -2,25 +2,44 @@
     height: calc(100vh - 59px);
 }
 
-.hello{
+.auth_left-panel{
     align-items: center;
     background-image: url('../../../../public/assets/homepage_bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: column;
+    text-align: center;
 }
 
-.hello h3{
+.auth_left-panel h2{
     color: #838eb9;
     font-family: PoppinsRegular;
     font-weight: 700;
-    font-size: 2rem;
 }
 
-.hello h1{
+.auth_left-panel h1{
     color: #ffffff;
     font-family: PoppinsBold;
-    font-size: 4rem;
     text-shadow: 2px 2px 2px #838eb9;
+}
+
+@media (max-width: 769px) {
+    .auth_left-panel h2{
+        font-size: 20px;
+    }
+
+    .auth_left-panel h1{
+        font-size: 38px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .auth_left-panel h2{
+        font-size: 20px;
+    }
+
+    .auth_left-panel h1{
+        font-size: 34px;
+    }
 }

@@ -1,12 +1,12 @@
 <section class="auth_hero-container">
-    <div class="container-fluid p-0">
-        <div class="full-height-section" >
-            <div class="row w-100 h-100 d-flex justify-content-center">
-                <div class="col-lg-6 col-md-4 d-flex justify-content-center h-100 hello" >
-                    <h3>Join us to experience the future of </h3>
-                    <h1>Urdu language.</h1>
+    <div class="container-fluid">
+        <div class="full-height-section">
+            <div class="row h-100 ">
+                <div class="col-lg-6 col-md-5 col-12 h-100  d-flex justify-content-center auth_left-panel">
+                    <h2>Join us to experience the future of </h2>
+                    <h1>Urdu Language.</h1>
                 </div>
-                <div class="col-lg-6 col-md-8 d-flex justify-content-center my-auto">
+                <div class="col-lg-6 col-md-7 col-12 d-flex justify-content-center my-auto">
                     <div *ngIf="currentView === 'login'" class="login-form_container mx-5 p-3 w-75">
                         <app-login (switchToRegister)="switchView('register')"></app-login>
                     </div>
@@ -16,5 +16,24 @@
                 </div>
             </div>
         </div>
+
     </div>
+    <!-- <div class="container-fluid p-0">
+        <div class="full-height-section" >
+            <div class="row w-100 h-100 d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center w-100 h-100 auth_left-panel" >
+                    <h2>Join us to experience the future of </h2>
+                    <h1>Urdu language.</h1>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center my-aut w-100">
+                    <div *ngIf="currentView === 'login'" class="login-form_container mx-5 p-3 w-75">
+                        <app-login (switchToRegister)="switchView('register')"></app-login>
+                    </div>
+                    <div *ngIf="currentView === 'register'" class="register-form_container mx-5 p-3 w-75">
+                        <app-register (switchToLogin)="switchView('login')"></app-register>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 </section>

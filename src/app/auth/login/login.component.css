@@ -96,3 +96,15 @@ button {
     color: #8a8a8a;
     cursor: pointer;
 }
+
+@media (max-width: 430px) {
+    .form-header-main{
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-footer{
+        text-align: center;
+    }
+
+}
