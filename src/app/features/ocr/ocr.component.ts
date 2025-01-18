@@ -14,7 +14,7 @@ export class OcrComponent {
   //Properties
   selectedImageUrl: string | null = null;
   selectedFiles = new FormData();
-  extractedText: string = 'text will aperar here ...';
+  extractedText: string = '';
 
   //Methods
   onFileDrop(event: DragEvent) {

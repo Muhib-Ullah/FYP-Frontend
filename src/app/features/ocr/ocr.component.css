@@ -1,4 +1,4 @@
-/*FILE UPLOAD CARD CSS START*/
+
 .feature_heading {
     font-family: PoppinsBold;
 }
@@ -124,9 +124,7 @@
     z-index: 1;
 }
 
-/*FILE UPLOAD CARD CSS END*/
 
-/*TEXT AREA CSS START*/
 
 .extract_text-container{
     height: 100%;
@@ -157,9 +155,18 @@
     font-weight: bold;
 }
 
-
-
 .feature_input_text-header h5{
     font-family: PoppinsRegular;
     font-weight: bold;
+}
+
+.extract_text_content textarea{
+    font-family: 'Noto Nastaliq Urdu';
+    text-align: right;
+    line-height: 2.5;
+}
+
+.form-control::placeholder{
+    font-family: PoppinsRegular;
+    text-align:left;
 }

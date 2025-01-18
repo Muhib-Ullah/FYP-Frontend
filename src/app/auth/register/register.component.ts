@@ -3,7 +3,7 @@ import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../services/auth.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
     private fb: FormBuilder, 
     private http: HttpClient, 
     public authService: AuthService,
-    public Toast: ToastrService
+    public Toast: ToastrService,
+    private router:Router,
     ) {
     
       this.registerForm = this.fb.group({
@@ -89,11 +90,12 @@ export class RegisterComponent implements OnInit {
     if (this.registerForm.valid) {
       const formData = this.registerForm.value
       console.log(' formData :>> ', formData);
-
+      
       this.authService.register(formData).subscribe({
         next: (response) => {
           if (response.status) {
             this.Toast.success('user registerd succesfully');
+            this.goToLogin()
           } else {
             this.Toast.error('user registerd not succesfully');
             console.log('response :>> ', response);

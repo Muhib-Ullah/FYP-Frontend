@@ -74,3 +74,11 @@
 
 
 
+
+.feature_output_textarea textarea{
+    resize: none;
+    overflow-y: auto; 
+    text-align: right;
+    font-family: 'Noto Nastaliq Urdu';
+    line-height: 3;
+}
