@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControlName, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent {
   constructor(
     private fb: FormBuilder, 
     private authService:AuthService,
-    public Toast: ToastrService
+    public Toast: ToastrService,
+    private router:Router,
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -59,7 +61,8 @@ export class LoginComponent {
       this.authService.login(formData).subscribe({
         next: (response) => {
           if (response.status) {
-            this.Toast.success('login succesfully');
+            this.Toast.success(response.message);
+            this.router.navigate(['./'])
           } else {
             this.Toast.error('user registerd not succesfully');
             console.log('response :>> ', response);
