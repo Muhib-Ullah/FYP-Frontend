@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { OcrComponent } from './ocr/ocr.component';
 import { TranslationComponent } from './translation/translation.component';
 import { SummarizationComponent } from './summarization/summarization.component';
+import { authGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
-  {path:'ocr',component: OcrComponent},
-  {path: 'summarization', component: SummarizationComponent},
-  {path:'translation', component:TranslationComponent}
+  {path:'ocr',component: OcrComponent, canActivate:[authGuard]},
+  {path: 'summarization', component: SummarizationComponent, canActivate:[authGuard]},
+  {path:'translation', component:TranslationComponent, canActivate:[authGuard]}
 ];
 
 @NgModule({

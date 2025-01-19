@@ -19,4 +19,8 @@ export class AuthService {
   login(data: any): Observable<any>{
     return this.http.post<any>(`${environment.apiUrl}/users/login`, data)
   }
+
+  isloggedIn(){
+    return localStorage.getItem('access_token')
+  }
 }

@@ -25,7 +25,6 @@
     line-height: 2;
 }
 
-
 .feature_input_text-action_btns button{
     border: none;
     cursor: pointer;
@@ -63,22 +62,15 @@
     outline: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .feature_output_textarea textarea{
     resize: none;
     overflow-y: auto; 
     text-align: right;
     font-family: 'Noto Nastaliq Urdu';
-    line-height: 3;
+    line-height: 2;
+}
+
+.feature_output_textarea textarea::placeholder {
+    font-family: PoppinsRegular;
+    text-align:left;
 }

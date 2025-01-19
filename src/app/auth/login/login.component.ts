@@ -51,7 +51,6 @@ export class LoginComponent {
   }
 
   goToRegister() {
-    console.log('iran')
     this.switchToRegister.emit();
   }
 
@@ -61,6 +60,7 @@ export class LoginComponent {
       this.authService.login(formData).subscribe({
         next: (response) => {
           if (response.status) {
+            localStorage.setItem('access_token', response.token)
             this.Toast.success(response.message);
             this.router.navigate(['./'])
           } else {
@@ -73,7 +73,9 @@ export class LoginComponent {
           this.Toast.error(err.error.message);
         },
       });
-
+    }
+    else{
+      this.Toast.error("Please enter valid login credentials.")
     }
   }
 
