@@ -8,12 +8,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { SummarizationComponent } from './summarization/summarization.component';
 import { TranslationComponent } from './translation/translation.component';
+import { TexttospeechComponent } from './texttospeech/texttospeech.component';
 
 @NgModule({
   declarations: [
     OcrComponent,
     SummarizationComponent,
-    TranslationComponent
+    TranslationComponent,
+    TexttospeechComponent
   ],
   imports: [
     FormsModule,

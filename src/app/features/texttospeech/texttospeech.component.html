@@ -1,0 +1,48 @@
+ <div class="tts-hero-container">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row mb-4 mt-4">
+                <div class="col-12 text-center tts_feature-heading-container">
+                    <h1 class="feature_heading">Text to <span style="color: #838eb9;">Speech</span></h1>
+                    <h5 class="feature_sub-heading">
+                        Effortlessly translate Urdu text into English with speed, accuracy, and a user-friendly experience tailored for you!
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <form (ngSubmit)="onSubmit()">
+            <div class="row m-4 p-2 text_container"
+                style="border-radius: 10px; box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;">
+                <div class="tts_input-text-container p-2 mb-3 mb-md-0 mx-auto">
+                    <div class="tts_input_text-header d-flex mb-2">
+                        <img src="assets/translate_img0.png" alt="translate image" width="50px">
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <h5 class="my-auto mx-2">Convert text to speech</h5>
+                            <h5 class="my-auto mx-2 urdu_text">متن کو تقریر میں تبدیل کریں</h5>
+                        </div>
+                    </div>
+                    <div class="tts_input_textarea mb-3">
+                        <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText"  name="inputText"
+                            placeholder="Enter the text you want to convert to speech."></textarea>
+                    </div>
+                    <div class="tts_input_text-footer d-flex justify-content-between">
+                        <div class="tts_input_text-action_btns my-auto">
+                            <button type="button" id="inputbtn" (click)="copyText()">
+                                <img src="assets/copy.png" alt="" width="30px">
+                            </button>
+                            <button type="button" (click)="clearText()">
+                                <img src="assets/delete.png" alt="" width="30px">
+                            </button>
+                        </div>
+                        <div class="output-container">
+                            <audio controls [src]="OutputAudio"></audio>
+                        </div>
+                        <button type="submit" class="btn custom-button">Convert to Speech</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

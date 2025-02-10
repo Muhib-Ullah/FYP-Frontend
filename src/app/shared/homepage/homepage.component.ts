@@ -32,7 +32,7 @@ export class HomepageComponent {
       ftname: 'Text to Speech',
       ftdesc: 'Effortlessly convert written Urdu text into natural-sounding speech for lingual speaking purposes.',
       ftimg: 'assets/text-to-speech.png',
-      ftroute: '/cloud-storage'
+      ftroute: 'textspeech'
     }]
 
 }

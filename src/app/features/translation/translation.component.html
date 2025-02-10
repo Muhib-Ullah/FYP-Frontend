@@ -18,7 +18,10 @@
                 <div class="col-lg-6 col-12 col-md-6 translation_input-text-container p-2 mb-3 mb-md-0">
                     <div class="translation_input_text-header d-flex mb-2">
                         <img src="assets/translate_img0.png" alt="translate image" width="50px">
-                        <h5 class="my-auto mx-2">Translate Text</h5>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <h5 class="my-auto mx-2">Translate Text</h5>
+                            <h5 class="my-auto mx-2 urdu_text">متن کا ترجمہ کریں</h5>
+                        </div>
                     </div>
                     <div class="translation_input_textarea mb-3">
                         <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText" name="inputText"
@@ -39,7 +42,10 @@
                 <div class="col-lg-6 col-12 col-md-6 translation_output-text-container p-2">
                     <div class="translation_input_text-header d-flex mb-2">
                         <img src="assets/translate_img1.png" alt="summary image" width="50px">
-                        <h5 class="my-auto mx-2">Review Translation</h5>
+                        <div style="display: flex; justify-content: space-between; width: 100%;">
+                            <h5 class="my-auto mx-2">Review Translationt</h5>
+                            <h5 class="my-auto mx-2 urdu_text">ترجمہ کا جائزہ لیں</h5>
+                        </div>
                     </div>
                     <div class="translation_input_textarea mb-3">
                         <textarea readonly id="outputText" class="form-control" rows="10" [(ngModel)]="OutputText"

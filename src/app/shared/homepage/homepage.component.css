@@ -56,4 +56,47 @@
   font-weight: bold;
 }
 
+.footer-hero-container {
+  background-color: rgb(243, 243, 246);
+  color: #7c787e;
+}
+
+.footer-copyright-container{
+  font-family: PoppinsRegular;
+  font-weight: bold;
+}
+
+.footer-brand-container span{
+  font-family: Caveat;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-brand-container{
+  font-family: PoppinsRegular;
+  font-weight: bold;
+}
+
+.footer-section-container h5{
+  font-family: PoppinsBold;
+}
+
+.footer-section-container{
+  font-family: PoppinsRegular;
+}
+
+.footer-section-container a{
+  text-decoration: none;
+  color: #7c787e;
+  line-height: 2;
+}
+
+.footer-section-container h5::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #95a1cf;
+  margin: 8px auto;
+}
 

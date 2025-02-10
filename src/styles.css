@@ -12,10 +12,18 @@
 
 @font-face {
     font-family: NastaliqUrdu;
-    src: url(../public/assets/Fonts/NotoNastaliqUrdu-VariableFont_wght.ttf) format('trutype');
+    src: url(../public/assets/Fonts/NotoNastaliqUrdu-VariableFont_wght.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: Monserrat;
+    src: url(../public/assets/Fonts/Montserrat-VariableFont_wght.ttf) format('truetype');
+}
 
+@font-face {
+    font-family: Caveat;
+    src: url(../public/assets/Fonts/Caveat-VariableFont_wght.ttf) format('truetype');
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

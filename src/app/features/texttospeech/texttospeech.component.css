@@ -7,12 +7,12 @@
     font-weight: bold;
 }
 
-.translation_input_text-header h5{
+.tts_input_text-header h5{
     font-family: PoppinsRegular;
     font-weight: bold;
 }
 
-.translation_input_textarea textarea{
+.tts_input_textarea textarea{
     resize: none;
     overflow-y: auto; 
     text-align: right;
@@ -20,17 +20,12 @@
     line-height: 2;
 }
 
-.translation_input_textarea textarea::placeholder{
+.tts_input_textarea textarea::placeholder{
     font-family: PoppinsRegular;
     text-align: left;
 }
 
-#outputText{
-    text-align: left;
-    font-family: PoppinsRegular;
-}
-
-.translation_input_text-action_btns button{
+.tts_input_text-action_btns button{
     border: none;
     cursor: pointer;
     appearance: none;
@@ -52,7 +47,7 @@
     color: white;
 }
 
-.translation_input_text-header .urdu_text{
+.tts_input_text-header .urdu_text{
     font-family: 'Noto Nastaliq Urdu';
 }
 

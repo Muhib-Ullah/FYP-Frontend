@@ -1,3 +1,202 @@
+.ocr_input_text-header h5 {
+    font-family: PoppinsRegular;
+    font-weight: bold;
+}
+
+.ocr_input_text-header .urdu_text {
+    font-family: 'Noto Nastaliq Urdu';
+}
+
+.ocr_output_text-header h5 {
+    font-family: PoppinsRegular;
+    font-weight: bold;
+}
+
+.ocr_output_text-header .urdu_text {
+    font-family: 'Noto Nastaliq Urdu';
+}
+
+.file-upload-form {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ocr-file-upload-data svg {
+    height:80px;
+    fill: rgb(82, 82, 82);
+    margin-bottom: 5px;
+}
+
+.ocr-file-upload-container {
+    border: 5px dashed #b5b5b5;
+    border-radius: 10px;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-display-main-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-display-main-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    inset-inline: 0;
+    gap: 20px;
+}
+
+.image-navigation button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #424242;
+    color: white;
+    border: none;
+}
+
+.ocr-file-upload-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ocr-file-upload-data p {
+    font-family: 'PoppinsRegular';
+    font-size: 14px;
+}
+
+.ocr-file-extension-container p {
+    font-family: 'PoppinsRegular';
+    font-size: 16px;
+    margin: 8px;
+}
+.ocr-file-extension-type {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ocr-file-extension-type button {
+    border-radius: 50px;
+    width: 80px;
+    border: none;
+    font-family: PoppinsRegular;
+    font-size: 14px;
+    padding: 5px 0px;
+    color: black;
+    border: 2px solid rgb(142, 142, 142);
+}
+
+.img-type-pill.active{
+    background-color: #4169e1;
+    color: white !important;
+}
+
+.pdf-type-pill.active{
+    background-color: #b31b1b;
+    color: white !important;
+}
+
+.ocr-page-count-container span {
+    font-family: 'PoppinsRegular';
+    color: rgb(103, 102, 102);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ocr-page-count-container .dynamic {
+    color: rgb(75, 75, 75);
+    border: 3px solid rgb(171, 171, 171);
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+.pdf-navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.pdf-navigation button {
+    background-color: #838eb9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+}
+
+.ocr_output_textarea textarea {
+    background-color: #efefef; 
+    resize: none;
+    overflow-y: auto; 
+    text-align: right;
+    font-family: 'Noto Nastaliq Urdu';
+    line-height: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .feature_heading {
     font-family: PoppinsBold;
@@ -61,7 +260,7 @@
     cursor: pointer;
 }
 
-.file-upload-data-container{
+.file-upload-data-container {
     position: relative;
     display: flex;
     justify-content: center;
@@ -118,22 +317,22 @@
 .remove-attach_icon {
     width: 20px;
     position: absolute;
-    top: 10px; 
-    right: 10px; 
-    cursor: pointer; 
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
     z-index: 1;
 }
 
 
 
-.extract_text-container{
+.extract_text-container {
     height: 100%;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     border-radius: 20px;
     padding: 20px 40px;
 }
 
-.text_display-footer{
+.text_display-footer {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -142,7 +341,7 @@
 }
 
 
-.text_display-action_btn{
+.text_display-action_btn {
     padding: 8px 20px;
     background-color: white;
     outline: 3px #838eb9 solid;
@@ -155,18 +354,18 @@
     font-weight: bold;
 }
 
-.feature_input_text-header h5{
+.feature_input_text-header h5 {
     font-family: PoppinsRegular;
     font-weight: bold;
 }
 
-.extract_text_content textarea{
+.extract_text_content textarea {
     font-family: 'Noto Nastaliq Urdu';
     text-align: right;
     line-height: 2.5;
 }
 
-.form-control::placeholder{
+.form-control::placeholder {
     font-family: PoppinsRegular;
-    text-align:left;
+    text-align: left;
 }

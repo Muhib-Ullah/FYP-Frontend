@@ -74,3 +74,7 @@
     font-family: PoppinsRegular;
     text-align:left;
 }
+
+.feature_input_text-header .urdu_text{
+    font-family: 'Noto Nastaliq Urdu';
+}

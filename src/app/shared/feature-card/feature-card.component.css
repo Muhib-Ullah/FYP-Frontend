@@ -1,7 +1,7 @@
 .card {
     font-family: PoppinsRegular;
     min-height: 300px;
-    background-color:rgb(243, 243, 246);;
+    background-color:rgb(243, 243, 246);
     padding: 20px;
     border-radius: 10px;
     border: none;
@@ -93,10 +93,6 @@
     }
 }
 
-
-
-/*Feature Card footer CSS */
-/* FROM UI VERSE */
 .cta {
     border: none;
     background: none;
