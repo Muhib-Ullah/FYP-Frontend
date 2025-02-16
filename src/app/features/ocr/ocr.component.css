@@ -66,8 +66,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     background-color: #424242;
     color: white;
@@ -105,7 +105,7 @@
     font-family: PoppinsRegular;
     font-size: 14px;
     padding: 5px 0px;
-    color: black;
+    color:  rgb(142, 142, 142);
     border: 2px solid rgb(142, 142, 142);
 }
 
@@ -158,214 +158,91 @@
     line-height: 2;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.feature_heading {
-    font-family: PoppinsBold;
-}
-
-.feature_sub-heading {
+.custom-button {
     font-family: PoppinsRegular;
-    font-weight: bold;
-}
-
-.file_attachment-container {
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 20px;
-    padding: 20px 40px;
-}
-
-.file_attachment-content-text {
-    font-family: PoppinsRegular;
-}
-
-.file_attachment-content-text h5 {
-    font-weight: bold;
-    color: #838eb9;
-}
-
-.file_attachment-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.done_btn {
-    width: 80%;
-    font-family: PoppinsRegular;
-    background-color: #838eb9;
-    color: white;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.done_btn:hover {
-    background-color: #727b9f;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.file-upload-container {
-    border: 5px dashed #b5b5b5;
-    border-radius: 10px;
-    width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #ffffff;
-    position: relative;
-    cursor: pointer;
-}
-
-.file-upload-data-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.file-upload-text {
-    font-family: PoppinsRegular;
-    text-align: center;
-    color: #424242;
-    font-size: 14px;
-}
-
-.file-upload-text strong {
-    font-size: 16px;
-    color: #000;
-}
-
-
-.browse_file-btn {
-    padding: 8px 20px;
     background-color: white;
-    outline: 3px #838eb9 solid;
-    outline-offset: -3px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 400ms;
-    font-family: PoppinsRegular;
+    padding: 10px 25px;
+    border: 3px solid #838eb9;
     color: #838eb9;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.browse_file-btn:hover {
+.custom-button:hover{
     background-color: #838eb9;
     color: white;
 }
 
-.image-preview {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+@media (max-width: 768px) {
+    .feature_sub-heading{
+        font-size: 16px;
+    }
+
+    .ocr_input_text-header h5{
+        font-size: 14px;
+    }
+
+    .ocr_input_text-header img {
+        width: 35px;
+    }
+
+    .ocr-file-upload-container {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .custom-button {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+
+    .ocr_output_text-header h5{
+        font-size: 14px;
+    }
+
+    .ocr_output_text-header img {
+        width: 35px;
+    }
+    
+    .ocr-file-upload-data svg {
+        height: 70px;
+    }
+
+    .ocr-page-count-container span {
+        font-size: 14px;
+    }
+
+    .pdf-navigation button{
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+
+    .ocr-file-extension-container p{
+        font-size: 14px;
+    }
 }
 
-.preview-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-.remove-attach_icon {
-    width: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    z-index: 1;
-}
 
 
 
-.extract_text-container {
-    height: 100%;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    border-radius: 20px;
-    padding: 20px 40px;
-}
-
-.text_display-footer {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    gap: 20px;
-}
 
 
-.text_display-action_btn {
-    padding: 8px 20px;
-    background-color: white;
-    outline: 3px #838eb9 solid;
-    outline-offset: -3px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 400ms;
-    font-family: PoppinsRegular;
-    color: #838eb9;
-    font-weight: bold;
-}
 
-.feature_input_text-header h5 {
-    font-family: PoppinsRegular;
-    font-weight: bold;
-}
 
-.extract_text_content textarea {
-    font-family: 'Noto Nastaliq Urdu';
-    text-align: right;
-    line-height: 2.5;
-}
 
-.form-control::placeholder {
-    font-family: PoppinsRegular;
-    text-align: left;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

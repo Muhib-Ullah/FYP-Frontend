@@ -49,7 +49,6 @@ export class OcrComponent {
         if (file.type.startsWith('image/')) {
           this.selectedImageURLs.push(fileUrl);
           this.selectedImageData.append('images', file, file.name)
-          console.log(this.selectedImageURLs)
         }
         else if(file.type === 'application/pdf') {
           this.selectedPdfURL.push(fileUrl)
@@ -112,9 +111,6 @@ export class OcrComponent {
           this.ImageResponseData = response;
           this.showImageText = this.ImageResponseData[this.imageIndexTracker].data;
         }
-        else{
-          console.log(response)
-        }
       })
     }
     else if(this.selectedFileType=='.pdf') {
@@ -123,10 +119,6 @@ export class OcrComponent {
           this.PdfResponseData = response.data;
           this.showImageText = response.data[0];
           this.pdfTotalPages = response.data.length;
-          console.log(response)
-        }
-        else{
-          console.log(response)
         }
       })
     }

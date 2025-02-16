@@ -15,7 +15,7 @@
         <form (ngSubmit)="onSubmit()">
             <div class="row m-4 p-2"
                 style="border-radius: 10px; box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;">
-                <div class="col-lg-5 col-md-6 col-12 ocr-input-container p-2">
+                <div class="col-lg-5 col-md-5 col-sm-12 col-12 ocr-input-container p-2">
                     <div class="ocr_input_text-header d-flex mb-3">
                         <img src="assets/ocr_img0.png" alt="translate image" width="50px">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
@@ -30,8 +30,8 @@
                                 <div class="image-display-container">
                                     <img [src]="getSelectedImage()" alt="Selected Image">
                                     <div class="image-navigation">
-                                        <button (click)="navigateImages('prev')" type="button"><i class="fa fa-arrow-left"></i></button>
-                                        <button (click)="navigateImages('next')" type="button">→</button>
+                                        <button (click)="navigateImages('prev')" type="button"><i class="fa fa-chevron-left"></i></button>
+                                        <button (click)="navigateImages('next')" type="button"><i class="fa fa-chevron-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -40,16 +40,15 @@
                                     <img src="assets/pdf-img.png" alt="Selected Image">
                                 </div>
                             </div>
-                            <div *ngIf="selectedImageURLs.length === 0 && selectedPdfURL.length === 0"
-                                class="ocr-file-upload-data">
-                                <svg height="1em" viewBox="0 0 640 512">
+                            <div *ngIf="selectedImageURLs.length === 0 && selectedPdfURL.length === 0" class="ocr-file-upload-data">
+                                <svg viewBox="0 0 640 512">
                                     <path
                                         d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z">
                                     </path>
                                 </svg>
-                                <p style="font-size: 16px;"><strong>Drag and Drop your document.</strong></p>
+                                <p><strong>Drag and Drop your document.</strong></p>
                                 <p>Or click on the button to select.</p>
-                                <button (click)="ocr_file_input.click()" type="button">Browse Document</button>
+                                <button (click)="ocr_file_input.click()" type="button" class="btn custom-button">Browse Document</button>
                             </div>
                             <input type="file" id="file" (change)="onFileSelected($event)" #ocr_file_input [multiple]="multipleFileSelection" [accept]="selectedFileType" hidden />
                         </div>
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-7 col-md-6 col-12 ocr-output-container p-2 d-flex flex-column">
+                <div class="col-lg-7 col-md-7 col-sm-12 col-12 ocr-output-container p-2 d-flex flex-column">
                     <div class="ocr_output_text-header d-flex mb-3">
                         <img src="assets/translate_img1.png" alt="summary image" width="50px">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
@@ -77,16 +76,16 @@
                             name="outputText" placeholder="Review the extracted text here."></textarea>
                     </div>
                     <div class="ocr_output_footer d-flex justify-content-between align-items-center mt-auto">
-                        <div class="pdf-navigation">
+                        <div class="pdf-navigation" *ngIf="selectedFileType == '.pdf'">
                             <button (click)="navigatePdfPages('prev')" type="button"><i class="fa fa-chevron-left"></i></button>
                             <button (click)="navigatePdfPages('next')" type="button"><i class="fa fa-chevron-right"></i></button>
                         </div>
-                        <div class="ocr-page-count-container">
+                        <div class="ocr-page-count-container" *ngIf="selectedFileType == '.pdf'">
                             <span class="dynamic">{{pdfIndexTracker ? pdfIndexTracker + 1 : 0}}</span>
                             <span> of {{pdfTotalPages}}</span>
                         </div>
                         <div class="ocr-submit-btn-container text-center">
-                            <button type="submit">Extract Text</button>
+                            <button type="submit" class="btn custom-button">Extract Text</button>
                         </div>
                     </div>
                 </div>

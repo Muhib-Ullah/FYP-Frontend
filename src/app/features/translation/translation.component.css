@@ -1,3 +1,13 @@
+.translation-hero-container {
+    padding: 0px 20px 10px 20px;
+}
+
+.text_container {
+    border-radius: 10px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 15px;
+}
+
 .feature_heading {
     font-family: PoppinsBold;
 }
@@ -54,16 +64,30 @@
 
 .translation_input_text-header .urdu_text{
     font-family: 'Noto Nastaliq Urdu';
+} 
+
+@media (max-width: 992px) {
+    .feature_sub-heading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .translation_input_text-header h5, 
+    .translation_output-text-header h5 {
+        font-size: 16px;
+    }
+    textarea {
+        font-size: 14px;
+    }
+    .translation_input_textarea textarea {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .translation_input_text-header img {
+        width: 40px;
+    }
+    .translation_input_text-action_btns button img {
+        width: 25px;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-

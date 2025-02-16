@@ -1,3 +1,7 @@
+.tts-hero-container {
+    padding: 0px 20px 10px 20px;
+}
+
 .feature_heading {
     font-family: PoppinsBold;
 }
@@ -47,10 +51,116 @@
     color: white;
 }
 
+.custom-button:hover img{
+    filter: brightness(0) invert(1);
+}
+
 .tts_input_text-header .urdu_text{
     font-family: 'Noto Nastaliq Urdu';
 }
 
+/* .tts_input_text-footer {
+    display: flex;
+    justify-content: space-between;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .feature_sub-heading {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .tts_input_text-header h5, 
+    .tts_input_text-header  h5 {
+        font-size: 16px;
+    }
+
+    .tts_input_text-header img,
+    .tts_input_text-header img {
+        width: 40px;
+    }
+
+    .tts_input_text-header textarea {
+        font-size: 14px;
+    }
+
+    .tts_input_text-action_btns button img {
+        width: 25px;
+    }
+
+    .sm_diff-container button {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .custom-button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+    
+    .tts_input_text-footer {
+        flex-direction: column;
+    }
+
+    .output-container{
+        display: flex;
+        justify-content: center; 
+    }
+
+    .tts_input_textarea textarea::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .tts_input_text-header h5, 
+    .tts_output_text-header h5 {
+        font-size: 16px;
+    }
+
+    .tts_input_text-header img,
+    .tts_output_text-header img {
+        width: 40px;
+    }
+
+    .feature_sub-heading {
+        font-size: 16px;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+
+    .tts_input_text-footer {
+        gap: 5px;
+    }
+
+    .tts_input_text-action_btns button img {
+        width: 25px;
+    }
+}
 
 
 
