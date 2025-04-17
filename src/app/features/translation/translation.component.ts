@@ -10,6 +10,7 @@ import { TranslationService } from '../../services/translation.service';
 export class TranslationComponent {
   InputText: string = '';
   OutputText: string = '';
+  selectedLanguage: string = 'english';
   RequestInProgress: boolean = false;
 
   constructor(private translationService: TranslationService, private Toast: ToastrService) { }
@@ -54,22 +55,22 @@ export class TranslationComponent {
         this.Toast.error('Please provide some text.');
         return;
       }
-
+  
       const formData = {
         text: this.InputText,
+        targetLang: this.selectedLanguage 
       };
-
+  
       this.RequestInProgress = true;
       this.translationService.translateText(formData).subscribe({
         next: (response) => {
           if (response.status) {
             this.OutputText = response.data;
-            this.RequestInProgress = false;
           } else {
             this.Toast.error(response.message);
-            this.RequestInProgress = false;
             this.clearOutputText();
           }
+          this.RequestInProgress = false;
         },
         error: (err) => {
           this.Toast.error(err.error.message);
@@ -80,6 +81,6 @@ export class TranslationComponent {
     } catch (error) {
       console.error('An unexpected error occurred:', error);
       this.RequestInProgress = false;
-    }
-  }
+    }
+  }
 }

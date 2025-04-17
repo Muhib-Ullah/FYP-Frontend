@@ -57,6 +57,10 @@
                         <div>
                             <p><strong>Select Document type.</strong></p>
                         </div>
+                        <div>
+                            <p>Generate Sample Image</p>
+                            <button (click)="generateSampleImage()">Generate Sample</button>
+                        </div>
                         <div class="ocr-file-extension-type">
                             <button (click)="selectFileType('image/*')" class="img-type-pill" type="button" [ngClass]="{'active': selectedFileType === 'image/*'}" >Image</button>
                             <button (click)="selectFileType('.pdf')" class="pdf-type-pill" type="button" [ngClass]="{'active': selectedFileType === '.pdf'}" >Pdf</button>

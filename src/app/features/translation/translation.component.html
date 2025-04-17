@@ -23,6 +23,17 @@
                             <h5 class="my-auto mx-2 urdu_text">متن کا ترجمہ کریں</h5>
                         </div>
                     </div>
+                    <div class="form-group mb-3">
+                        <label for="languageSelect"><strong>Select Language:</strong></label>
+                        <select id="languageSelect" class="form-control" [(ngModel)]="selectedLanguage" name="language">
+                            <option value="english">English</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="sindhi">Sindhi</option>
+                            <option value="pashto">Pashto</option>
+                            <option value="pakistani punjabi">Punjabi</option>
+                            <option value="turkish">Turkish</option>
+                        </select>
+                    </div>
                     <div class="translation_input_textarea mb-3">
                         <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText" name="inputText"
                             placeholder="Enter the text you want to translate."></textarea>
@@ -47,7 +58,7 @@
                             <h5 class="my-auto mx-2 urdu_text">ترجمہ کا جائزہ لیں</h5>
                         </div>
                     </div>
-                    <div class="translation_input_textarea mb-3">
+                    <div class="translation_output_textarea mb-3">
                         <textarea readonly id="outputText" class="form-control" rows="10" [(ngModel)]="OutputText"
                             name="outputText" style="background-color: #efefef;"
                             placeholder="Review the translated text here."></textarea>

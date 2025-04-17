@@ -61,6 +61,7 @@ export class LoginComponent {
         next: (response) => {
           if (response.status) {
             localStorage.setItem('access_token', response.token)
+            this.authService.getUserfromToken();
             this.Toast.success(response.message);
             this.router.navigate(['./'])
           } else {

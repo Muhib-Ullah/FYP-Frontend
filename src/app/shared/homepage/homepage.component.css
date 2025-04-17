@@ -1,59 +1,69 @@
 /* SPLASH SCREEN SECTION CSS */
 .full-height-section {
-  height: calc(100vh - 56px);
-  background-image: url(../../../../public/assets/homepage_bg.jpg);
-  background-position: center;
+  height: calc(100vh - 52px);
+  background-image: url(../../../../public/assets/homepage_bg1.jpg);
+  background-position: center bottom;
   background-size: cover;
 }
 
-.splash-screen_header-container {
-  padding: 20px;
+
+.splash-screen_header-container .urdu_text{
+  font-family: 'Noto Nastaliq Urdu';
+  line-height: 2;
+  font-size: 5rem;
+  color: #bbbbbb;
 }
 
 .splash-screen_header-container h3 {
+  font-size: 2rem;
+  color: #ffffff;
   font-family: PoppinsRegular;
-  font-size: clamp(28px, 4vw, 50px);
-  color: #838eb9;
 }
 
 .splash-screen_header-container h1 {
-  font-family: PoppinsBold;
-  font-size: clamp(32px, 5vw, 50px);
-  color: #838eb9;
+  font-family: 'Mullish';
+  font-size: 5rem;
+  letter-spacing: 50px;
+  color: #3a5fb5;
+  font-weight: bold;
 }
 
-.login-btn {
-  border-radius: 20px;
-  background-color: transparent;
-  font-family: PoppinsRegular;
-  font-size: clamp(16px, 2vw, 24px); 
-  font-weight: 700;
-  color: #838eb9;
-  padding: 10px 20px;
-  border: 3px solid #838eb9;
-  letter-spacing: 2px;
-  transition: 0.2s all ease-in;
+.action-button-inverted {
+  background: none !important;
+  border: 3px solid white !important;
 }
 
-.login-btn:hover {
-  background-color: #838eb9;
+.action-button-inverted:hover {
+  background: #3a5fb5 !important;
+  border: 3px solid #3a5fb5 !important;
+}
+
+.action-button {
+  width: 180px;
+  font-family: 'PoppinsRegular';
+  font-size: 1rem;
+  padding: 14px;
+  letter-spacing: 3px;
+  background: #3a5fb5;
+  border: 3px solid #3a5fb5;
+  border-radius: 30px;
+  transition:0.1s ease-in-out;
   color: white;
 }
 
-.splash_screen-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.action-button:hover{
+  background: transparent;
+  border: 3px solid white;
 }
 
 .service-heading-container h1 {
   font-family: PoppinsBold;
+  color: #5b5b5b;
 }
 
 .service-heading-container h3 {
   font-family: PoppinsRegular;
-  font-weight: bold;
+  color: #5b5b5b;
 }
 
 .footer-hero-container {

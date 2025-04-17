@@ -9,6 +9,13 @@ import { Router } from '@angular/router';
 export class HomepageComponent {
   constructor(private router: Router) {}
 
+  navigateToAboutUs() {
+    this.router.navigate(['about-us']);
+  } 
+  navigateToLogin(){
+    this.router.navigate(['auth'])
+  }
+
   featureCards = [
     {
       ftname: 'OCR Technology',

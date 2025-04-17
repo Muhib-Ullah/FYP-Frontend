@@ -21,6 +21,11 @@
 }
 
 @font-face {
+    font-family: Mullish;
+    src: url(../public/assets/Fonts/Mulish-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
     font-family: Caveat;
     src: url(../public/assets/Fonts/Caveat-VariableFont_wght.ttf) format('truetype');
 }

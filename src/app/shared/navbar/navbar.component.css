@@ -1,22 +1,17 @@
 .navbar{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    background-color: #838eb9;
-}
-
-.navbar-brand{ 
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: white;
 }
 
 .nav-link {
     font-family: PoppinsRegular;
-    color: white;
+    color: #bbbbbb;
     margin: 0px 5px;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-size: 14px;
     position: relative;
   }
 
+  
+/* 
 .nav-link::after {
     content: '';
     position: absolute;
@@ -33,4 +28,4 @@
     width: 50%; 
     left: 50%;
     transform: translateX(-50%);
-  }
+  } */

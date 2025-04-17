@@ -7,6 +7,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { FeaturesModule } from '../features/features.module';
 import { FeatureCardComponent } from './feature-card/feature-card.component';
 import { ProgressBarComponent } from './progressbar/progressbar.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ProgressBarComponent } from './progressbar/progressbar.component';
     NavbarComponent,
     HomepageComponent,
     FeatureCardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

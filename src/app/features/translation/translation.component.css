@@ -35,9 +35,17 @@
     text-align: left;
 }
 
-#outputText{
-    text-align: left;
+.translation_output_textarea textarea::placeholder{
     font-family: PoppinsRegular;
+    text-align: left;
+}
+
+.translation_output_textarea textarea{
+    resize: none;
+    overflow-y: auto; 
+    text-align: right;
+    font-family: 'Noto Nastaliq Urdu';
+    line-height: 2;
 }
 
 .translation_input_text-action_btns button{
