@@ -1,19 +1,24 @@
-.ocr_input_text-header h5 {
+.feature_heading {
+    font-family: PoppinsBold;
+    color: #5b5b5b;
+}
+
+.feature_sub-heading {
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
 }
 
-.ocr_input_text-header .urdu_text {
-    font-family: 'Noto Nastaliq Urdu';
-}
 
-.ocr_output_text-header h5 {
+.feature_text-header h5 {
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
 }
 
-.ocr_output_text-header .urdu_text {
+.feature_text-header .urdu_text {
     font-family: 'Noto Nastaliq Urdu';
+    color: #5b5b5b;
 }
 
 .file-upload-form {
@@ -69,9 +74,12 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #424242;
     color: white;
     border: none;
+    background: rgba(0, 0, 0, 0.64);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.9px);
+    -webkit-backdrop-filter: blur(8.9px);
 }
 
 .ocr-file-upload-data {
@@ -139,7 +147,7 @@
 }
 
 .pdf-navigation button {
-    background-color: #838eb9;
+    background-color: #3a5fb5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,6 +157,10 @@
     color: white;
 }
 
+.ocr_output_textarea textarea::placeholder{
+    font-family: PoppinsRegular !important;
+    text-align: left;
+}
 .ocr_output_textarea textarea {
     background-color: #efefef; 
     resize: none;
@@ -158,22 +170,25 @@
     line-height: 2;
 }
 
-.custom-button {
-    font-family: PoppinsRegular;
-    background-color: white;
-    padding: 10px 25px;
-    border: 3px solid #838eb9;
-    color: #838eb9;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.custom-button:hover{
-    background-color: #838eb9;
+.action-button {
+    font-family: 'PoppinsRegular';
+    font-size: 14px;
+    padding: 10px 16px;
+    letter-spacing: 3px;
+    background: #3a5fb5;
+    border: 3px solid #3a5fb5;
+    border-radius: 30px;
+    transition:0.1s ease-in-out;
     color: white;
+    transition: 0.3s all ease-in-out;
 }
 
+.action-button:hover{
+    background: white;
+    color: #3a5fb5;
+}
 
+/* 
 @media (max-width: 768px) {
     .feature_sub-heading{
         font-size: 16px;
@@ -222,27 +237,4 @@
         font-size: 14px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/

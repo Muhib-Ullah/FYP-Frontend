@@ -10,16 +10,48 @@
 
 .feature_heading {
     font-family: PoppinsBold;
+    color: #5b5b5b;
 }
 
 .feature_sub-heading {
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
 }
 
 .feature_input_text-header h5{
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
+}
+
+.action-button {
+    font-family: 'PoppinsRegular';
+    font-size: 14px;
+    padding: 10px 16px;
+    letter-spacing: 3px;
+    background: #3a5fb5;
+    border: 3px solid #3a5fb5;
+    border-radius: 30px;
+    transition:0.1s ease-in-out;
+    color: white;
+    transition: 0.3s all ease-in-out;
+}
+
+.action-button:hover{
+    background: white;
+    color: #3a5fb5;
+}
+
+.sample-generate-btn {
+    border: none;
+    background: none;
+    font-family: PoppinsRegular;
+}
+
+.sample-generate-btn span{
+    font-size: 14px;
+    color: #6c6c6c;
 }
 
 .feature_input_textarea textarea{
@@ -55,34 +87,18 @@
     background-color: inherit;
 }
 
-.custom-button {
-    font-family: PoppinsRegular;
-    background-color: white;
-    padding: 10px 25px;
-    border: 3px solid #838eb9;
-    color: #838eb9;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.custom-button:hover{
-    background-color: #838eb9;
-    color: white;
-}
-
 .sm_diff-container button{
     font-family: PoppinsRegular;
-    border: 3px solid #838eb9;
-    color: #838eb9;
-    font-weight: 700;
+    color: #6c6c6c;
+    font-size: 14px;
     letter-spacing: 2px;
+    border: none;
+    transition: 0.2s all ease-in-out;
 }
 
-.active {
-    background-color: #838eb9;
-    color: white !important; 
-    border: none;
-    outline: none;
+.active-difficulty {
+    color: #3a5fb5 !important; 
+    font-weight: 700;
 }
 
 .feature_input_text-header .urdu_text{
@@ -97,6 +113,30 @@
     gap: 10px;
 } 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 @media (min-width: 768px) and (max-width: 992px) {
     .feature_input_text-header h5, 
     .feature_output_text-header h5 {
@@ -164,5 +204,4 @@
         font-size: 14px;
     }
 }
-
-
+ */

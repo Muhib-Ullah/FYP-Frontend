@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row mb-4 mt-4">
-                <div class="col-12 text-center tts_feature-heading-container">
-                    <h1 class="feature_heading">Image to <span style="color: #838eb9;">Text </span>Converter</h1>
+                <div class="col-12 text-center feature-heading-container">
+                    <h1 class="feature_heading">Image to <span style="color: #3a5fb5;">Text </span>Converter</h1>
                     <h5 class="feature_sub-heading">
                         Transform Images into Text with Ease. Fast, Accurate & Reliable OCR Solution!
                     </h5>
@@ -16,7 +16,7 @@
             <div class="row m-4 p-2"
                 style="border-radius: 10px; box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;">
                 <div class="col-lg-5 col-md-5 col-sm-12 col-12 ocr-input-container p-2">
-                    <div class="ocr_input_text-header d-flex mb-3">
+                    <div class="feature_text-header d-flex mb-3">
                         <img src="assets/ocr_img0.png" alt="translate image" width="50px">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
                             <h5 class="my-auto mx-2">Upload Document</h5>
@@ -48,7 +48,7 @@
                                 </svg>
                                 <p><strong>Drag and Drop your document.</strong></p>
                                 <p>Or click on the button to select.</p>
-                                <button (click)="ocr_file_input.click()" type="button" class="btn custom-button">Browse Document</button>
+                                <button (click)="ocr_file_input.click()" type="button" class="btn action-button">Browse Document</button>
                             </div>
                             <input type="file" id="file" (change)="onFileSelected($event)" #ocr_file_input [multiple]="multipleFileSelection" [accept]="selectedFileType" hidden />
                         </div>
@@ -57,10 +57,6 @@
                         <div>
                             <p><strong>Select Document type.</strong></p>
                         </div>
-                        <div>
-                            <p>Generate Sample Image</p>
-                            <button (click)="generateSampleImage()">Generate Sample</button>
-                        </div>
                         <div class="ocr-file-extension-type">
                             <button (click)="selectFileType('image/*')" class="img-type-pill" type="button" [ngClass]="{'active': selectedFileType === 'image/*'}" >Image</button>
                             <button (click)="selectFileType('.pdf')" class="pdf-type-pill" type="button" [ngClass]="{'active': selectedFileType === '.pdf'}" >Pdf</button>
@@ -68,8 +64,8 @@
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-7 col-sm-12 col-12 ocr-output-container p-2 d-flex flex-column">
-                    <div class="ocr_output_text-header d-flex mb-3">
-                        <img src="assets/translate_img1.png" alt="summary image" width="50px">
+                    <div class="feature_text-header d-flex mb-3">
+                        <img src="assets/ocr_img1.png" alt="summary image" width="50px">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
                             <h5 class="my-auto mx-2">Extracted Text</h5>
                             <h5 class="my-auto mx-2 urdu_text">ترجمہ کا جائزہ لیں</h5>
@@ -79,19 +75,31 @@
                         <textarea readonly id="outputText" class="form-control" rows="9" [(ngModel)]="showImageText"
                             name="outputText" placeholder="Review the extracted text here."></textarea>
                     </div>
-                    <div class="ocr_output_footer d-flex justify-content-between align-items-center mt-auto">
-                        <div class="pdf-navigation" *ngIf="selectedFileType == '.pdf'">
-                            <button (click)="navigatePdfPages('prev')" type="button"><i class="fa fa-chevron-left"></i></button>
-                            <button (click)="navigatePdfPages('next')" type="button"><i class="fa fa-chevron-right"></i></button>
+                    <div class="ocr_output_footer d-flex align-items-center mt-auto">
+                        <!-- LEFT SIDE (shown only for PDFs) -->
+                        <div class="d-flex align-items-center gap-3" *ngIf="selectedFileType == '.pdf'">
+                          <div class="pdf-navigation">
+                            <button (click)="navigatePdfPages('prev')" type="button">
+                              <i class="fa fa-chevron-left"></i>
+                            </button>
+                            <button (click)="navigatePdfPages('next')" type="button">
+                              <i class="fa fa-chevron-right"></i>
+                            </button>
+                          </div>
+                          <div class="ocr-page-count-container">
+                            <span class="dynamic">{{ pdfIndexTracker ? pdfIndexTracker + 1 : 0 }}</span>
+                            <span> of {{ pdfTotalPages }}</span>
+                          </div>
                         </div>
-                        <div class="ocr-page-count-container" *ngIf="selectedFileType == '.pdf'">
-                            <span class="dynamic">{{pdfIndexTracker ? pdfIndexTracker + 1 : 0}}</span>
-                            <span> of {{pdfTotalPages}}</span>
+                      
+                        <!-- RIGHT SIDE: Button always pushed right -->
+                        <div class="ms-auto">
+                          <button type="submit" class="btn action-button">
+                            Extract Text
+                          </button>
                         </div>
-                        <div class="ocr-submit-btn-container text-center">
-                            <button type="submit" class="btn custom-button">Extract Text</button>
-                        </div>
-                    </div>
+                      </div>
+                      
                 </div>
             </div>
         </form>

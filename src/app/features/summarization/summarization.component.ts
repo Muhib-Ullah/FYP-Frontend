@@ -34,9 +34,7 @@ export class SummarizationComponent {
   clearOutputText() {
     this.OutputText = ''
   }
-
   
-
   copyText(event: Event) {
     const buttonElement = (event.currentTarget as HTMLElement);
     const buttonId = buttonElement.id;
@@ -101,7 +99,6 @@ export class SummarizationComponent {
     const randomIndex = Math.floor(Math.random() * this.SampleUrduText.length);
     this.InputText = this.SampleUrduText[randomIndex];
   }
-
 }
 
 

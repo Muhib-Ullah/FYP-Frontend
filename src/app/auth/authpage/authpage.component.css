@@ -1,10 +1,10 @@
 .full-height-section {
-    height: calc(100vh - 59px);
+    height: calc(100vh - 52px);
 }
 
 .auth_left-panel{
     align-items: center;
-    background-image: url('../../../../public/assets/homepage_bg.jpg');
+    background-image: url('../../../../public/assets/homepage_bg1.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,7 +13,7 @@
 }
 
 .auth_left-panel h2{
-    color: #838eb9;
+    color: #3a5fb5;
     font-family: PoppinsRegular;
     font-weight: 700;
 }
@@ -21,10 +21,10 @@
 .auth_left-panel h1{
     color: #ffffff;
     font-family: PoppinsBold;
-    text-shadow: 2px 2px 2px #838eb9;
+    text-shadow: 2px 2px 2px #3a5fb5;
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
     .auth_left-panel h2{
         font-size: 20px;
     }
@@ -42,4 +42,4 @@
     .auth_left-panel h1{
         font-size: 34px;
     }
-}
+} */

@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row mb-4 mt-4">
-                <div class="col-12 text-center tts_feature-heading-container">
-                    <h1 class="feature_heading">Text to <span style="color: #838eb9;">Speech</span></h1>
+                <div class="col-12 text-center feature-heading-container">
+                    <h1 class="feature_heading">Text to <span style="color: #3a5fb5;">Speech</span></h1>
                     <h5 class="feature_sub-heading">
                         Effortlessly translate Urdu text into English with speed, accuracy, and a user-friendly
                         experience tailored for you!
@@ -17,35 +17,51 @@
             <div class="row p-2 text_container"
                 style="border-radius: 10px; box-shadow: rgba(255, 255, 255, 0.3) 0px 1px 1px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;">
                 <div class="col-lg-12 col-md-12 col-sm-12 tts_input-text-container p-2 mx-auto">
-                    <div class="tts_input_text-header d-flex mb-2">
-                        <img src="assets/translate_img0.png" alt="translate image" width="50px">
+                    <div class="feature_text-header d-flex mb-2">
+                        <img src="assets/text-to-speech-input.png" alt="translate image" width="50px">
                         <div style="display: flex; justify-content: space-between; width: 100%;">
                             <h5 class="my-auto mx-2">Text to Speech</h5>
                             <h5 class="my-auto mx-2 urdu_text">متن سے تقریر</h5>
                         </div>
                     </div>
-                    <div class="tts_input_textarea mb-3">
+                    <div class="feature_input_textarea mb-3">
                         <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText" name="inputText"
                             placeholder="Enter the text you want to convert to speech."></textarea>
                     </div>
                     <div class="tts_input_text-footer">
                         <div class="d-flex justify-content-between">
-                            <div class="tts_input_text-action_btns my-auto">
+                            <div class="feature_input_text-action_btns my-auto d-flex align-items-center">
                                 <button type="button" id="inputbtn" (click)="copyText()">
                                     <img src="assets/copy.png" alt="" width="30px">
                                 </button>
                                 <button type="button" (click)="clearText()">
                                     <img src="assets/delete.png" alt="" width="30px">
                                 </button>
-                                <input type="file" accept=".pdf" (change)="onFileSelected($event)">
+                                <button (click)="getRandomUrduParagraph()" type="button" class="sample-generate-btn">
+                                    <img src="assets/generate-btn-img.png" alt="" width="45px">
+                                    <span class="mx-1">Generate Sample</span>
+                                </button>
+                                <div>
+                                    <label for="pdfUpload" class="d-flex" class="upload-pdf-label">
+                                      <img src="assets/pdf.png" alt="" width="30px">
+                                      <span>Attach Pdf</span>
+                                    </label>
+                                    <input
+                                      type="file"
+                                      id="pdfUpload"
+                                      accept=".pdf"
+                                      (change)="onFileSelected($event)"
+                                      style="display: none;" 
+                                    />
+                                </div>
                             </div>
                             <div style="gap: 10px;" class="d-flex">
-                                <button type="button" (click)="toggleAudio()" class="btn custom-button" style="padding: 7px 20px;">
-                                    <img src="assets/volume.png" alt="" width="30px">
+                                <button type="button" (click)="toggleAudio()" class="btn action-button action-button-inverted" style="padding: 7px 20px;">
+                                    <img src="assets/audio-play.png" alt="" width="30px">
                                     {{isPlaying ? 'Pause Audio' : 'Play Audio'}}
                                 </button>
                                 <audio #audioPlayer [src]="OutputAudio"></audio>
-                                <button type="submit" class="btn custom-button">Convert to Speech</button>
+                                <button type="submit" class="btn action-button">Convert to Speech</button>
                             </div>
                         </div>
                     </div>

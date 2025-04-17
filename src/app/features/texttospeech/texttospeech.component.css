@@ -4,19 +4,22 @@
 
 .feature_heading {
     font-family: PoppinsBold;
+    color: #5b5b5b;
 }
 
 .feature_sub-heading {
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
 }
 
-.tts_input_text-header h5{
+.feature_text-header h5{
     font-family: PoppinsRegular;
     font-weight: bold;
+    color: #5b5b5b;
 }
 
-.tts_input_textarea textarea{
+.feature_input_textarea textarea{
     resize: none;
     overflow-y: auto; 
     text-align: right;
@@ -24,18 +27,75 @@
     line-height: 2;
 }
 
-.tts_input_textarea textarea::placeholder{
+.feature_input_textarea textarea::placeholder{
     font-family: PoppinsRegular;
     text-align: left;
 }
 
-.tts_input_text-action_btns button{
+.feature_input_text-action_btns button{
     border: none;
     cursor: pointer;
     appearance: none;
     background-color: inherit;
 }
 
+.action-button {
+    font-family: 'PoppinsRegular';
+    font-size: 14px;
+    padding: 10px 16px;
+    letter-spacing: 3px;
+    background: #3a5fb5;
+    border: 3px solid #3a5fb5;
+    border-radius: 30px;
+    transition:0.1s ease-in-out;
+    color: white;
+    transition: 0.3s all ease-in-out;
+}
+
+.action-button-inverted {
+    background: none !important;
+    border: 3px solid #3a5fb5 !important;
+    color: #3a5fb5 !important;
+    transition: 0.3s all ease-in-out;
+  }
+  
+  .action-button-inverted:hover {
+    background: #3a5fb5 !important;
+    color: white !important;    
+  }
+
+.action-button:hover{
+    background: white;
+    color: #3a5fb5;
+}
+
+.action-button:hover img{
+    filter: brightness(0) invert(1);
+} 
+
+.upload-pdf-label {
+    border: 2px solid #888888;
+    padding: 5px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.upload-pdf-label span{
+    font-family: PoppinsRegular;
+    color: #5b5b5b;
+    font-size: 14px;
+}
+
+.sample-generate-btn {
+    border: none;
+    background: none;
+    font-family: PoppinsRegular;
+}
+
+.sample-generate-btn span{
+    font-size: 14px;
+    color: #5b5b5b;
+}
+/* 
 .custom-button {
     font-family: PoppinsRegular;
     background-color: white;
@@ -53,9 +113,9 @@
 
 .custom-button:hover img{
     filter: brightness(0) invert(1);
-}
+} */
 
-.tts_input_text-header .urdu_text{
+.feature_text-header .urdu_text{
     font-family: 'Noto Nastaliq Urdu';
 }
 

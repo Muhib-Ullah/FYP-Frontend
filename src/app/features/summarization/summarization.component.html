@@ -2,8 +2,8 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row mb-4 mt-4">
-                <div class="col-12 text-center ocr_feature-heading-container">
-                    <h1 class="feature_heading">Text <span style="color: #838eb9;">Summarization</span></h1>
+                <div class="col-12 text-center feature-heading-container">
+                    <h1 class="feature_heading">Text <span style="color: #3a5fb5;">Summarization</span></h1>
                     <h5 class="feature_sub-heading">
                         Effortlessly Summarize Urdu Text. Quick, Accurate, and Flexible Summarization at Your
                         Fingertips!
@@ -26,7 +26,8 @@
                     </div>
                     <div class="feature_input_textarea mb-3">
                         <textarea id="inputText" class="form-control" rows="10" [(ngModel)]="InputText" name="inputText"
-                            placeholder="Enter the text you want to summarize."></textarea>
+                            placeholder="Enter the text you want to summarize.">
+                        </textarea>
                     </div>
                     <div class="feature_input_text-footer d-flex justify-content-between my-auto" style="min-height: 50px;">
                         <div class="feature_input_text-action_btns">
@@ -38,22 +39,26 @@
                             </button>
                         </div>
                         <div class="sm_diff-container">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn" [ngClass]="{'active': selectedDifficulty === 'Easy'}"
+                            <div class="btn-group" role="group" style="border: 2px solid #9a9a9a;">
+                                <button type="button" class="btn" [ngClass]="{'active-difficulty': selectedDifficulty === 'Easy'}"
                                     (click)="selectDifficulty('Easy')">Easy</button>
-                                <button type="button" class="btn diff_btn"
-                                    [ngClass]="{'active': selectedDifficulty === 'Moderate'}"
+                                <button type="button" class="btn"
+                                    [ngClass]="{'active-difficulty': selectedDifficulty === 'Moderate'}"
                                     (click)="selectDifficulty('Moderate')">Moderate</button>
                                 <button type="button" class="btn"
-                                    [ngClass]="{'active': selectedDifficulty === 'Difficult'}"
+                                    [ngClass]="{'active-difficulty': selectedDifficulty === 'Difficult'}"
                                     (click)="selectDifficulty('Difficult')">Difficult</button>
                             </div>
                         </div>
                         <div>
-                            <button (click)="getRandomUrduParagraph()" type="button">Generate Sample</button>
+                            <button (click)="getRandomUrduParagraph()" type="button" class="sample-generate-btn">
+                                <img src="assets/generate-btn-img.png" alt="" width="45px">
+                                <span class="mx-1">Generate Sample</span>
+                            </button>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-6 col-12 col-md-6 translation_output-text-container p-2">
                     <div class="feature_input_text-header d-flex mb-2">
                         <img src="assets/summary_img1.png" alt="summary image" width="50px">
@@ -74,7 +79,9 @@
                             </button>
                         </div>
                         <div class="submit-btn-container">
-                        <button type="submit" class="btn custom-button">Summarize</button>
+                        <button type="submit" class="btn action-button">
+                            <span>Summarize</span>
+                        </button>
                         </div>
                     </div>
                 </div>
